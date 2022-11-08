@@ -1,17 +1,15 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-import time
+from thermometer import Thermometer
+import yaml
 
 
-class Thermometer:
-    def __init__(self, ):
-        driver = webdriver.Chrome('./drivers/chromedriver.exe')
-        driver.get('https://gagalive.com')
+def load_yaml(cfg_path='configs/config.yaml'):
+    return yaml.full_load(open(cfg_path, 'r', encoding='utf-8-sig'))
 
-        # driver.set_window_size(813, 512)
-        # driver.set_window_position(167, 354)
-        # driver.execute_script("window.scrollTo(0, 135)")
 
-        self.driver = driver
-
+if __name__ == '__main__':
+    cfg = load_yaml()
+    target_site = cfg['TARGET_SITE']
+    tm = Thermometer(target_site, cfg)
+    tm.login()
+    tm.get_rest_time()
 

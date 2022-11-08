@@ -1,0 +1,19 @@
+
+
+TARGET_SITE: 'https://arca.live/u/login?goto=%2Fb%2Fthermometer'
+
+ID: xx
+PW: xx
+
+BAT_BUTTON:
+  2X: //*[@id="doplay"]/div/div[3]/div[2]/p[1]/span[1]
+  2XR: //*[@id="doplay"]/div/div[3]/div[2]/p[2]/span[1]
+
+  4X: //*[@id="doplay"]/div/div[3]/div[2]/p[2]/span[1]
+  4XR: //*[@id="doplay"]/div/div[3]/div[2]/p[2]/span[2]
+
+  8X: //*[@id="doplay"]/div/div[3]/div[2]/p[2]/span[1]
+  8XR: //*[@id="doplay"]/div/div[3]/div[2]/p[2]/span[3]
+
+  ODD: //*[@id="doplay"]/div/div[3]/div[2]/p[3]/span[1]
+  EVEN: //*[@id="doplay"]/div/div[3]/div[2]/p[3]/span[2]
